@@ -6,6 +6,7 @@ const app = express();
 const redisHost = process.env.REDIS_HOST || 'localhost';
 const redisPort = process.env.REDIS_PORT || 6379;
 const redisPassword = process.env.REDIS_PASSWORD || '';
+const PORT = process.env.PORT || 8080;
 
 const client = createClient({
   host: redisHost,
@@ -41,6 +42,6 @@ app.get('/redis', async (req, res) => {
   }
 });
 
-app.listen(8080, () => {
-  console.log('Server listening on port 8080');
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });

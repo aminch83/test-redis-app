@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules
+yarn.lock
+
+# Environment variables
+.env
+
+# Build files
+build
+dist
+
+# IDE files
+.vscode
+.idea
+
+# Miscellaneous
+.DS_Store
+Thumbs.db

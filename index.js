@@ -22,6 +22,10 @@ client.once('error', (err) => {
 });
 
 app.get('/', async (req, res) => {
+  res.json({ message: 'Hello World' });
+});
+
+app.get('/redis', async (req, res) => {
   try {
     if (!client.isOpen) {
       await client.connect();
